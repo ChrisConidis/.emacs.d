@@ -36,14 +36,6 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;; Solarized
-;; https://github.com/sellout/emacs-color-theme-solarized/pull/187
-(setq color-themes '())
-(use-package color-theme-solarized
-  :config
-  (customize-set-variable 'frame-background-mode 'dark)
-  (load-theme 'solarized t))
-
 (use-package ensime
   :ensure t
   :pin melpa)
@@ -53,3 +45,9 @@
 
 (use-package scala-mode
   :pin melpa)
+
+(add-to-list 'load-path "~/.emacs.d/evil")
+(require 'evil)
+(evil-mode 1)
+
+(load-theme 'distinguished t)
