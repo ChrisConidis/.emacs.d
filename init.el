@@ -46,8 +46,8 @@
 (use-package scala-mode
   :pin melpa)
 
-(add-to-list 'load-path "~/.emacs.d/evil")
-(require 'evil)
+(use-package evil
+  :demand)
 (evil-mode 1)
 
 (load-theme 'distinguished t)
